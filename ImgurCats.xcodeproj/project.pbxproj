@@ -92,14 +92,10 @@
 		60EDB2A7298E973A00281120 /* ImgurCats */ = {
 			isa = PBXGroup;
 			children = (
-				60EDB2E9298ECF5400281120 /* CatsList */,
+				60EDB2EE298ED23700281120 /* Scenes */,
 				60EDB2E6298EA95100281120 /* Model */,
 				60EDB2D8298EA3E400281120 /* Service */,
-				60EDB2A8298E973A00281120 /* AppDelegate.swift */,
-				60EDB2AA298E973A00281120 /* SceneDelegate.swift */,
-				60EDB2B1298E973D00281120 /* Assets.xcassets */,
-				60EDB2B3298E973D00281120 /* LaunchScreen.storyboard */,
-				60EDB2B6298E973D00281120 /* Info.plist */,
+				60EDB2F0298ED26C00281120 /* Resources */,
 			);
 			path = ImgurCats;
 			sourceTree = "<group>";
@@ -164,6 +160,26 @@
 				60EDB2EC298ECFA300281120 /* CatsListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		60EDB2EE298ED23700281120 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				60EDB2E9298ECF5400281120 /* CatsList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		60EDB2F0298ED26C00281120 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				60EDB2A8298E973A00281120 /* AppDelegate.swift */,
+				60EDB2AA298E973A00281120 /* SceneDelegate.swift */,
+				60EDB2B1298E973D00281120 /* Assets.xcassets */,
+				60EDB2B3298E973D00281120 /* LaunchScreen.storyboard */,
+				60EDB2B6298E973D00281120 /* Info.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

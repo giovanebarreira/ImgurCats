@@ -7,14 +7,10 @@
 
 import Foundation
 
-import Foundation
-
-// MARK: - Welcome
 struct Cats: Codable {
     let data: [CatImages]
 }
 
-// MARK: - Datum
 struct CatImages: Codable {
     let images: [Image]
 
@@ -23,8 +19,6 @@ struct CatImages: Codable {
     }
 }
 
-
-// MARK: - Image
 struct Image: Codable {
     let id: String
     let title: String?
