@@ -21,6 +21,9 @@
 		60EDB2E5298EA8D100281120 /* CatsImagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2E4298EA8D100281120 /* CatsImagesService.swift */; };
 		60EDB2E8298EA95C00281120 /* Cats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2E7298EA95C00281120 /* Cats.swift */; };
 		60EDB2ED298ECFA300281120 /* CatsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2EC298ECFA300281120 /* CatsListViewModel.swift */; };
+		60EDB2F3298ED85100281120 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2F2298ED85100281120 /* Coordinator.swift */; };
+		60EDB2F5298ED86100281120 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2F4298ED86100281120 /* AppCoordinator.swift */; };
+		60EDB2F7298ED8C400281120 /* CatsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2F6298ED8C400281120 /* CatsListCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		60EDB2E4298EA8D100281120 /* CatsImagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsImagesService.swift; sourceTree = "<group>"; };
 		60EDB2E7298EA95C00281120 /* Cats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cats.swift; sourceTree = "<group>"; };
 		60EDB2EC298ECFA300281120 /* CatsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsListViewModel.swift; sourceTree = "<group>"; };
+		60EDB2F2298ED85100281120 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		60EDB2F4298ED86100281120 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		60EDB2F6298ED8C400281120 /* CatsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsListCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 		60EDB2A7298E973A00281120 /* ImgurCats */ = {
 			isa = PBXGroup;
 			children = (
+				60EDB2F1298ED83C00281120 /* Coordinator */,
 				60EDB2EE298ED23700281120 /* Scenes */,
 				60EDB2E6298EA95100281120 /* Model */,
 				60EDB2D8298EA3E400281120 /* Service */,
@@ -180,6 +187,16 @@
 				60EDB2B6298E973D00281120 /* Info.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		60EDB2F1298ED83C00281120 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				60EDB2F2298ED85100281120 /* Coordinator.swift */,
+				60EDB2F4298ED86100281120 /* AppCoordinator.swift */,
+				60EDB2F6298ED8C400281120 /* CatsListCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,13 +300,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60EDB2F5298ED86100281120 /* AppCoordinator.swift in Sources */,
 				60EDB2E5298EA8D100281120 /* CatsImagesService.swift in Sources */,
 				60EDB2E8298EA95C00281120 /* Cats.swift in Sources */,
 				60EDB2E1298EA64800281120 /* Endpoint.swift in Sources */,
 				60EDB2DD298EA58C00281120 /* NetworkService.swift in Sources */,
 				60EDB2DB298EA4FB00281120 /* HttpMethod.swift in Sources */,
 				60EDB2AD298E973A00281120 /* CatsListViewController.swift in Sources */,
+				60EDB2F3298ED85100281120 /* Coordinator.swift in Sources */,
 				60EDB2DF298EA5C000281120 /* NetworkError.swift in Sources */,
+				60EDB2F7298ED8C400281120 /* CatsListCoordinator.swift in Sources */,
 				60EDB2ED298ECFA300281120 /* CatsListViewModel.swift in Sources */,
 				60EDB2A9298E973A00281120 /* AppDelegate.swift in Sources */,
 				60EDB2AB298E973A00281120 /* SceneDelegate.swift in Sources */,
