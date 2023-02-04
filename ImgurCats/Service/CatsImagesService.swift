@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CatsImagesNetworking {
-    typealias CatsImages = ((Result<[Cats], NetworkError>) -> Void)
+    typealias CatsImages = ((Result<Cats, NetworkError>) -> Void)
     func fetchCatsImages(page: Int, completion: @escaping CatsImages)
 }
 

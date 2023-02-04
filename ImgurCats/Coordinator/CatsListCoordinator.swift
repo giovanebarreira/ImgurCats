@@ -19,7 +19,7 @@ final class CatsListCoordinator: Coordinator {
         let service = NetworkService()
         let catsImageService = CatsImagesServices(service: service)
         let viewModel = CatsListViewModel(service: catsImageService)
-        let viewController = CatsListViewController()
+        let viewController = CatsListViewController(viewModel: viewModel)
 
         navigationController.pushViewController(viewController, animated: true)
     }

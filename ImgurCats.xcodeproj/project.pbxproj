@@ -147,26 +147,10 @@
 		60EDB2E9298ECF5400281120 /* CatsList */ = {
 			isa = PBXGroup;
 			children = (
-				60EDB2EB298ECF9400281120 /* ViewModel */,
-				60EDB2EA298ECF6E00281120 /* View */,
-			);
-			path = CatsList;
-			sourceTree = "<group>";
-		};
-		60EDB2EA298ECF6E00281120 /* View */ = {
-			isa = PBXGroup;
-			children = (
+				60EDB2EC298ECFA300281120 /* CatsListViewModel.swift */,
 				60EDB2AC298E973A00281120 /* CatsListViewController.swift */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		60EDB2EB298ECF9400281120 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				60EDB2EC298ECFA300281120 /* CatsListViewModel.swift */,
-			);
-			path = ViewModel;
+			path = CatsList;
 			sourceTree = "<group>";
 		};
 		60EDB2EE298ED23700281120 /* Scenes */ = {

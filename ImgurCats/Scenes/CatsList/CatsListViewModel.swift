@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CatsListViewModelOutput {
-    var catsList: [Cats] { get }
+    var catsList: [CatImages] { get }
     var delegate: CatsListDelegate? { get set }
     func fetchList(page: Int)
 }
@@ -20,7 +20,7 @@ protocol CatsListDelegate: AnyObject {
 }
 
 final class CatsListViewModel: CatsListViewModelOutput {
-    var catsList: [Cats] = []
+    var catsList: [CatImages] = []
     weak var delegate: CatsListDelegate?
     private let service: CatsImagesNetworking
 
@@ -32,13 +32,13 @@ final class CatsListViewModel: CatsListViewModelOutput {
         DispatchQueue.global(qos: .background).async {
             self.fetchCatsImages(page: page) { [weak self] catsResult in
                 guard let catsResult = catsResult else { return }
-                self?.catsList.append(contentsOf: catsResult)
+                self?.catsList.append(contentsOf: catsResult.data)
                 self?.delegate?.displayCatsList()
             }
         }
     }
 
-    func fetchCatsImages(page: Int, completion: @escaping ([Cats]?) -> Void) {
+    func fetchCatsImages(page: Int, completion: @escaping (Cats?) -> Void) {
         delegate?.showSpinner(true)
         service.fetchCatsImages(page: page) { [weak self] result in
             switch result {

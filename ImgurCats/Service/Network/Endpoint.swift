@@ -24,6 +24,3 @@ struct Endpoint {
         return "\(baseUrl)\(gallerySearch)\(query)&page=\(page)"
     }
 }
-
-
-//https://api.imgur.com/3/gallery/search/?q=cats&page=0
