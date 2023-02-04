@@ -9,24 +9,22 @@
 /* Begin PBXBuildFile section */
 		60EDB2A9298E973A00281120 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2A8298E973A00281120 /* AppDelegate.swift */; };
 		60EDB2AB298E973A00281120 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2AA298E973A00281120 /* SceneDelegate.swift */; };
-		60EDB2AD298E973A00281120 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2AC298E973A00281120 /* ViewController.swift */; };
-		60EDB2B0298E973A00281120 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60EDB2AE298E973A00281120 /* Main.storyboard */; };
+		60EDB2AD298E973A00281120 /* CatsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2AC298E973A00281120 /* CatsListViewController.swift */; };
 		60EDB2B2298E973D00281120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60EDB2B1298E973D00281120 /* Assets.xcassets */; };
 		60EDB2B5298E973D00281120 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60EDB2B3298E973D00281120 /* LaunchScreen.storyboard */; };
 		60EDB2C0298E973D00281120 /* ImgurCatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2BF298E973D00281120 /* ImgurCatsTests.swift */; };
-		60EDB2CA298E973D00281120 /* ImgurCatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2C9298E973D00281120 /* ImgurCatsUITests.swift */; };
-		60EDB2CC298E973D00281120 /* ImgurCatsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2CB298E973D00281120 /* ImgurCatsUITestsLaunchTests.swift */; };
+		60EDB2DB298EA4FB00281120 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2DA298EA4FB00281120 /* HttpMethod.swift */; };
+		60EDB2DD298EA58C00281120 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2DC298EA58C00281120 /* NetworkService.swift */; };
+		60EDB2DF298EA5C000281120 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2DE298EA5C000281120 /* NetworkError.swift */; };
+		60EDB2E1298EA64800281120 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2E0298EA64800281120 /* Endpoint.swift */; };
+		60EDB2E3298EA7E100281120 /* ID.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60EDB2E2298EA7E100281120 /* ID.plist */; };
+		60EDB2E5298EA8D100281120 /* CatsImagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2E4298EA8D100281120 /* CatsImagesService.swift */; };
+		60EDB2E8298EA95C00281120 /* Cats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2E7298EA95C00281120 /* Cats.swift */; };
+		60EDB2ED298ECFA300281120 /* CatsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2EC298ECFA300281120 /* CatsListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		60EDB2BC298E973D00281120 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 60EDB29D298E973A00281120 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 60EDB2A4298E973A00281120;
-			remoteInfo = ImgurCats;
-		};
-		60EDB2C6298E973D00281120 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 60EDB29D298E973A00281120 /* Project object */;
 			proxyType = 1;
@@ -39,16 +37,20 @@
 		60EDB2A5298E973A00281120 /* ImgurCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImgurCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60EDB2A8298E973A00281120 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60EDB2AA298E973A00281120 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		60EDB2AC298E973A00281120 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		60EDB2AF298E973A00281120 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		60EDB2AC298E973A00281120 /* CatsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsListViewController.swift; sourceTree = "<group>"; };
 		60EDB2B1298E973D00281120 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60EDB2B4298E973D00281120 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60EDB2B6298E973D00281120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60EDB2BB298E973D00281120 /* ImgurCatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImgurCatsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60EDB2BF298E973D00281120 /* ImgurCatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurCatsTests.swift; sourceTree = "<group>"; };
-		60EDB2C5298E973D00281120 /* ImgurCatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImgurCatsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		60EDB2C9298E973D00281120 /* ImgurCatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurCatsUITests.swift; sourceTree = "<group>"; };
-		60EDB2CB298E973D00281120 /* ImgurCatsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurCatsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		60EDB2DA298EA4FB00281120 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		60EDB2DC298EA58C00281120 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		60EDB2DE298EA5C000281120 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		60EDB2E0298EA64800281120 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		60EDB2E2298EA7E100281120 /* ID.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ID.plist; sourceTree = "<group>"; };
+		60EDB2E4298EA8D100281120 /* CatsImagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsImagesService.swift; sourceTree = "<group>"; };
+		60EDB2E7298EA95C00281120 /* Cats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cats.swift; sourceTree = "<group>"; };
+		60EDB2EC298ECFA300281120 /* CatsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +68,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		60EDB2C2298E973D00281120 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +76,6 @@
 			children = (
 				60EDB2A7298E973A00281120 /* ImgurCats */,
 				60EDB2BE298E973D00281120 /* ImgurCatsTests */,
-				60EDB2C8298E973D00281120 /* ImgurCatsUITests */,
 				60EDB2A6298E973A00281120 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +85,6 @@
 			children = (
 				60EDB2A5298E973A00281120 /* ImgurCats.app */,
 				60EDB2BB298E973D00281120 /* ImgurCatsTests.xctest */,
-				60EDB2C5298E973D00281120 /* ImgurCatsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,10 +92,11 @@
 		60EDB2A7298E973A00281120 /* ImgurCats */ = {
 			isa = PBXGroup;
 			children = (
+				60EDB2E9298ECF5400281120 /* CatsList */,
+				60EDB2E6298EA95100281120 /* Model */,
+				60EDB2D8298EA3E400281120 /* Service */,
 				60EDB2A8298E973A00281120 /* AppDelegate.swift */,
 				60EDB2AA298E973A00281120 /* SceneDelegate.swift */,
-				60EDB2AC298E973A00281120 /* ViewController.swift */,
-				60EDB2AE298E973A00281120 /* Main.storyboard */,
 				60EDB2B1298E973D00281120 /* Assets.xcassets */,
 				60EDB2B3298E973D00281120 /* LaunchScreen.storyboard */,
 				60EDB2B6298E973D00281120 /* Info.plist */,
@@ -118,13 +112,58 @@
 			path = ImgurCatsTests;
 			sourceTree = "<group>";
 		};
-		60EDB2C8298E973D00281120 /* ImgurCatsUITests */ = {
+		60EDB2D8298EA3E400281120 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				60EDB2C9298E973D00281120 /* ImgurCatsUITests.swift */,
-				60EDB2CB298E973D00281120 /* ImgurCatsUITestsLaunchTests.swift */,
+				60EDB2D9298EA4DD00281120 /* Network */,
+				60EDB2E4298EA8D100281120 /* CatsImagesService.swift */,
 			);
-			path = ImgurCatsUITests;
+			path = Service;
+			sourceTree = "<group>";
+		};
+		60EDB2D9298EA4DD00281120 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				60EDB2DA298EA4FB00281120 /* HttpMethod.swift */,
+				60EDB2DC298EA58C00281120 /* NetworkService.swift */,
+				60EDB2DE298EA5C000281120 /* NetworkError.swift */,
+				60EDB2E0298EA64800281120 /* Endpoint.swift */,
+				60EDB2E2298EA7E100281120 /* ID.plist */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		60EDB2E6298EA95100281120 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				60EDB2E7298EA95C00281120 /* Cats.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		60EDB2E9298ECF5400281120 /* CatsList */ = {
+			isa = PBXGroup;
+			children = (
+				60EDB2EB298ECF9400281120 /* ViewModel */,
+				60EDB2EA298ECF6E00281120 /* View */,
+			);
+			path = CatsList;
+			sourceTree = "<group>";
+		};
+		60EDB2EA298ECF6E00281120 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				60EDB2AC298E973A00281120 /* CatsListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60EDB2EB298ECF9400281120 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				60EDB2EC298ECFA300281120 /* CatsListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +204,6 @@
 			productReference = 60EDB2BB298E973D00281120 /* ImgurCatsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		60EDB2C4298E973D00281120 /* ImgurCatsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 60EDB2D5298E973D00281120 /* Build configuration list for PBXNativeTarget "ImgurCatsUITests" */;
-			buildPhases = (
-				60EDB2C1298E973D00281120 /* Sources */,
-				60EDB2C2298E973D00281120 /* Frameworks */,
-				60EDB2C3298E973D00281120 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				60EDB2C7298E973D00281120 /* PBXTargetDependency */,
-			);
-			name = ImgurCatsUITests;
-			productName = ImgurCatsUITests;
-			productReference = 60EDB2C5298E973D00281120 /* ImgurCatsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +218,6 @@
 						CreatedOnToolsVersion = 14.2;
 					};
 					60EDB2BA298E973D00281120 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 60EDB2A4298E973A00281120;
-					};
-					60EDB2C4298E973D00281120 = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 60EDB2A4298E973A00281120;
 					};
@@ -221,7 +238,6 @@
 			targets = (
 				60EDB2A4298E973A00281120 /* ImgurCats */,
 				60EDB2BA298E973D00281120 /* ImgurCatsTests */,
-				60EDB2C4298E973D00281120 /* ImgurCatsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,19 +248,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				60EDB2B5298E973D00281120 /* LaunchScreen.storyboard in Resources */,
+				60EDB2E3298EA7E100281120 /* ID.plist in Resources */,
 				60EDB2B2298E973D00281120 /* Assets.xcassets in Resources */,
-				60EDB2B0298E973A00281120 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		60EDB2B9298E973D00281120 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		60EDB2C3298E973D00281120 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,7 +267,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60EDB2AD298E973A00281120 /* ViewController.swift in Sources */,
+				60EDB2E5298EA8D100281120 /* CatsImagesService.swift in Sources */,
+				60EDB2E8298EA95C00281120 /* Cats.swift in Sources */,
+				60EDB2E1298EA64800281120 /* Endpoint.swift in Sources */,
+				60EDB2DD298EA58C00281120 /* NetworkService.swift in Sources */,
+				60EDB2DB298EA4FB00281120 /* HttpMethod.swift in Sources */,
+				60EDB2AD298E973A00281120 /* CatsListViewController.swift in Sources */,
+				60EDB2DF298EA5C000281120 /* NetworkError.swift in Sources */,
+				60EDB2ED298ECFA300281120 /* CatsListViewModel.swift in Sources */,
 				60EDB2A9298E973A00281120 /* AppDelegate.swift in Sources */,
 				60EDB2AB298E973A00281120 /* SceneDelegate.swift in Sources */,
 			);
@@ -272,15 +288,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		60EDB2C1298E973D00281120 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				60EDB2CC298E973D00281120 /* ImgurCatsUITestsLaunchTests.swift in Sources */,
-				60EDB2CA298E973D00281120 /* ImgurCatsUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,22 +296,9 @@
 			target = 60EDB2A4298E973A00281120 /* ImgurCats */;
 			targetProxy = 60EDB2BC298E973D00281120 /* PBXContainerItemProxy */;
 		};
-		60EDB2C7298E973D00281120 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 60EDB2A4298E973A00281120 /* ImgurCats */;
-			targetProxy = 60EDB2C6298E973D00281120 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		60EDB2AE298E973A00281120 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				60EDB2AF298E973A00281120 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		60EDB2B3298E973D00281120 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -441,8 +435,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ImgurCats/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -469,8 +462,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ImgurCats/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -526,42 +518,6 @@
 			};
 			name = Release;
 		};
-		60EDB2D6298E973D00281120 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PP645U6956;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.giovane.ImgurCatsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ImgurCats;
-			};
-			name = Debug;
-		};
-		60EDB2D7298E973D00281120 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PP645U6956;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.giovane.ImgurCatsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ImgurCats;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -588,15 +544,6 @@
 			buildConfigurations = (
 				60EDB2D3298E973D00281120 /* Debug */,
 				60EDB2D4298E973D00281120 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		60EDB2D5298E973D00281120 /* Build configuration list for PBXNativeTarget "ImgurCatsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				60EDB2D6298E973D00281120 /* Debug */,
-				60EDB2D7298E973D00281120 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
