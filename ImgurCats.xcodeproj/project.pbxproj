@@ -24,6 +24,8 @@
 		60EDB2F3298ED85100281120 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2F2298ED85100281120 /* Coordinator.swift */; };
 		60EDB2F5298ED86100281120 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2F4298ED86100281120 /* AppCoordinator.swift */; };
 		60EDB2F7298ED8C400281120 /* CatsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EDB2F6298ED8C400281120 /* CatsListCoordinator.swift */; };
+		60FF170C29911A77002A30BB /* CatsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FF170B29911A77002A30BB /* CatsCollectionCell.swift */; };
+		60FF170F29911E4F002A30BB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 60FF170E29911E4F002A30BB /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,7 @@
 		60EDB2F2298ED85100281120 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		60EDB2F4298ED86100281120 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		60EDB2F6298ED8C400281120 /* CatsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsListCoordinator.swift; sourceTree = "<group>"; };
+		60FF170B29911A77002A30BB /* CatsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60FF170F29911E4F002A30BB /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +151,7 @@
 		60EDB2E9298ECF5400281120 /* CatsList */ = {
 			isa = PBXGroup;
 			children = (
+				60FF170A29911A6A002A30BB /* Cell */,
 				60EDB2EC298ECFA300281120 /* CatsListViewModel.swift */,
 				60EDB2AC298E973A00281120 /* CatsListViewController.swift */,
 			);
@@ -183,6 +188,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		60FF170A29911A6A002A30BB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				60FF170B29911A77002A30BB /* CatsCollectionCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,6 +212,9 @@
 			dependencies = (
 			);
 			name = ImgurCats;
+			packageProductDependencies = (
+				60FF170E29911E4F002A30BB /* Kingfisher */,
+			);
 			productName = ImgurCats;
 			productReference = 60EDB2A5298E973A00281120 /* ImgurCats.app */;
 			productType = "com.apple.product-type.application";
@@ -249,6 +265,9 @@
 				Base,
 			);
 			mainGroup = 60EDB29C298E973A00281120;
+			packageReferences = (
+				60FF170D29911E4F002A30BB /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 60EDB2A6298E973A00281120 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -286,6 +305,7 @@
 			files = (
 				60EDB2F5298ED86100281120 /* AppCoordinator.swift in Sources */,
 				60EDB2E5298EA8D100281120 /* CatsImagesService.swift in Sources */,
+				60FF170C29911A77002A30BB /* CatsCollectionCell.swift in Sources */,
 				60EDB2E8298EA95C00281120 /* Cats.swift in Sources */,
 				60EDB2E1298EA64800281120 /* Endpoint.swift in Sources */,
 				60EDB2DD298EA58C00281120 /* NetworkService.swift in Sources */,
@@ -569,6 +589,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		60FF170D29911E4F002A30BB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		60FF170E29911E4F002A30BB /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60FF170D29911E4F002A30BB /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 60EDB29D298E973A00281120 /* Project object */;
 }
