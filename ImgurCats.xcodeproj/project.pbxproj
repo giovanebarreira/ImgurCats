@@ -81,6 +81,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6051C3FC29927F27004A1458 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		60EDB29C298E973A00281120 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +109,7 @@
 		60EDB2A7298E973A00281120 /* ImgurCats */ = {
 			isa = PBXGroup;
 			children = (
+				6051C3FC29927F27004A1458 /* Extensions */,
 				60EDB2F1298ED83C00281120 /* Coordinator */,
 				60EDB2EE298ED23700281120 /* Scenes */,
 				60EDB2E6298EA95100281120 /* Model */,

@@ -13,7 +13,7 @@ struct Cats: Codable {
 
 struct CatImages: Codable {
     let images: [Image]?
-    let tags: [Tags]
+    let tags: [Tag]
 
     enum CodingKeys: String, CodingKey {
         case images, tags
@@ -28,7 +28,7 @@ struct Image: Codable {
     }
 }
 
-struct Tags: Codable {
+struct Tag: Codable {
     let displayName: String
 
     enum CodingKeys: String, CodingKey {

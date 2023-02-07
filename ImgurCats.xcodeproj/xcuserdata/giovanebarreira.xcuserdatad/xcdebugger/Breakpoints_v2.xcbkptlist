@@ -7,70 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E59077CC-1370-4169-912A-2816AB8B8BFC"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ImgurCats/Scenes/CatsList/CatsListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "fetchCatsImages(page:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CFC04603-FF81-43BE-890C-ACB0051123BC"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ImgurCats/Scenes/CatsList/CatsListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "fetchCatsImages(page:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "CFC04603-FF81-43BE-890C-ACB0051123BC - 8e5c20bac1422513"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ImgurCats.CatsListViewModel.fetchCatsImages(page: Swift.Int, completion: (Swift.Optional&lt;ImgurCats.Cats&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "ImgurCats"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/giovanebarreira/Desktop/ImgurCats/ImgurCats/Scenes/CatsList/CatsListViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "294">
-               </Location>
-               <Location
-                  uuid = "CFC04603-FF81-43BE-890C-ACB0051123BC - c1468f099c798c1c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;ImgurCats.Cats, ImgurCats.NetworkError&gt;) -&gt; () in ImgurCats.CatsListViewModel.fetchCatsImages(page: Swift.Int, completion: (Swift.Optional&lt;ImgurCats.Cats&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "ImgurCats"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/giovanebarreira/Desktop/ImgurCats/ImgurCats/Scenes/CatsList/CatsListViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "204">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "A4719878-DF1E-41F5-A552-D1DBBE78D036"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -78,8 +14,8 @@
             filePath = "ImgurCats/Scenes/CatsList/CatsListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "displayCatsList()"
             landmarkType = "7">
          </BreakpointContent>

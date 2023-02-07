@@ -12,14 +12,11 @@ final class CatsCollectionCell: UICollectionViewCell {
     static let cellIdentifier = "CatsCollectionCell"
     private var cornerRadius: CGFloat = 5.0
 
-    var thumbnail: UIImageView = {
-        let thumbnailImg = UIImageView()
+    var thumbnail: AnimatedImageView = {
+        let thumbnailImg = AnimatedImageView()
         thumbnailImg.translatesAutoresizingMaskIntoConstraints = false
-        thumbnailImg.contentMode = .scaleAspectFit
+        thumbnailImg.contentMode = .scaleAspectFill
         thumbnailImg.clipsToBounds = true
-        thumbnailImg.image = UIImage(systemName: "photo")
-        thumbnailImg.tintColor = .white
-        thumbnailImg.backgroundColor = .gray
         return thumbnailImg
     }()
 
@@ -48,7 +45,17 @@ final class CatsCollectionCell: UICollectionViewCell {
         thumbnail.image = nil
     }
 
-    
+    func configure(with image: URL) {
+       // images.forEach { self.downloadImage($0) }
+        self.downloadImage(image)
+
+    }
+
+    private func downloadImage(_ imageURL: URL) {
+        let resource = ImageResource(downloadURL: imageURL, cacheKey: imageURL.absoluteString)
+        thumbnail.kf.indicatorType = .activity
+        thumbnail.kf.setImage(with: resource)
+    }
 
     private func setupLayout() {
         contentView.backgroundColor = .gray

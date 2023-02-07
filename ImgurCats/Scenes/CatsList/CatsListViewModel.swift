@@ -8,7 +8,8 @@
 import Foundation
 
 protocol CatsListViewModelOutput {
-    var catsList: [CatImages] { get }
+    var catsListDisplay: [CatsListDisplay] { get }
+    var amountOfCells: Int { get }
     var delegate: CatsListDelegate? { get set }
     func fetchList(page: Int)
 }
@@ -20,24 +21,30 @@ protocol CatsListDelegate: AnyObject {
 }
 
 final class CatsListViewModel: CatsListViewModelOutput {
-    var catsList: [CatImages] = []
+    var catsListDisplay: [CatsListDisplay] = []
+    var amountOfCells: Int = 0
     weak var delegate: CatsListDelegate?
     private let service: CatsImagesNetworking
-
+    
     init(service: CatsImagesNetworking) {
         self.service = service
     }
-
+    
     func fetchList(page: Int) {
         DispatchQueue.global(qos: .background).async {
             self.fetchCatsImages(page: page) { [weak self] catsResult in
                 guard let catsResult = catsResult else { return }
-                self?.catsList.append(contentsOf: catsResult.data)
+
+                catsResult.data.forEach { cat in
+                    let catsListDisplay = CatsListDisplay(cats: cat)
+                    self?.catsListDisplay.append(catsListDisplay)
+                    self?.amountOfCells += catsListDisplay.imagesUrl.count
+                }
                 self?.delegate?.displayCatsList()
             }
         }
     }
-
+    
     func fetchCatsImages(page: Int, completion: @escaping (Cats?) -> Void) {
         delegate?.showSpinner(true)
         service.fetchCatsImages(page: page) { [weak self] result in
@@ -50,5 +57,25 @@ final class CatsListViewModel: CatsListViewModelOutput {
             }
             self?.delegate?.showSpinner(false)
         }
+    }
+}
+
+struct CatsListDisplay {
+    let cats: CatImages
+    
+    var imagesUrl: [URL] {
+        var urlList: [URL] = []
+        cats.images?.forEach { imageUrl in
+            if let url = URL(string: imageUrl.link) {
+                if url.pathExtension != "mp4" {
+                    urlList.append(url)
+                }
+            }
+        }
+        return urlList
+    }
+    
+    var name: String {
+        return cats.tags.first?.displayName ?? ""
     }
 }

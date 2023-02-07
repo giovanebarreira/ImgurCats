@@ -24,10 +24,9 @@ final class CatsListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .red
+        self.setupCollectionView()
         viewModel.delegate = self
         viewModel.fetchList(page: 1)
-        setupCollectionView()
     }
 
     private func setupCollectionView() {
@@ -48,7 +47,9 @@ final class CatsListViewController: UIViewController {
 
 extension CatsListViewController: CatsListDelegate {
     func displayCatsList() {
-        print(viewModel.catsList)
+        DispatchQueue.main.async {
+            self.collectionView?.reloadData()
+        }
     }
 
     func showSpinner(_ isLoading: Bool) {
@@ -62,11 +63,15 @@ extension CatsListViewController: CatsListDelegate {
 
 extension CatsListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
+        print(viewModel.amountOfCells, "VC")
+        return viewModel.amountOfCells
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CatsCollectionCell.cellIdentifier, for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CatsCollectionCell.cellIdentifier, for: indexPath) as? CatsCollectionCell else { return UICollectionViewCell() }
+
+        let imagesUrl = viewModel.catsListDisplay.flatMap { $0.imagesUrl }
+        cell.configure(with: imagesUrl[indexPath.row])
 
         return cell
     }
@@ -75,5 +80,6 @@ extension CatsListViewController: UICollectionViewDataSource {
 extension CatsListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("selected cell at \(indexPath)")
+        print(viewModel.catsListDisplay[indexPath.row])
     }
 }
