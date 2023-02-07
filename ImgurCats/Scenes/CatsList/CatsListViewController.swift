@@ -10,7 +10,9 @@ import UIKit
 final class CatsListViewController: UIViewController {
 
     private var viewModel: CatsListViewModelOutput
-    var collectionView: UICollectionView?
+    private var collectionView: UICollectionView?
+    private var isFetchingData: Bool = false
+    private var currentPage: Int = 0
 
     init(viewModel: CatsListViewModelOutput) {
         self.viewModel = viewModel
@@ -26,7 +28,7 @@ final class CatsListViewController: UIViewController {
         super.viewDidLoad()
         self.setupCollectionView()
         viewModel.delegate = self
-        viewModel.fetchList(page: 1)
+        viewModel.fetchList(page: currentPage)
     }
 
     private func setupCollectionView() {
@@ -47,23 +49,36 @@ final class CatsListViewController: UIViewController {
 
 extension CatsListViewController: CatsListDelegate {
     func displayCatsList() {
+        if isFetchingData {
+            isFetchingData = false
+        }
+
         DispatchQueue.main.async {
             self.collectionView?.reloadData()
         }
     }
 
     func showSpinner(_ isLoading: Bool) {
-
+        DispatchQueue.main.async {
+            if !self.isFetchingData {
+                isLoading ? self.showSpinner() : self.removeSpinner()
+            }
+        }
     }
 
     func didFail(error: String) {
+        DispatchQueue.main.async {
+            self.showAlert(errorMessage: error, callback: self.alertCallback)
+        }
+    }
 
+    private func alertCallback() {
+        self.viewModel.fetchList(page: self.currentPage)
     }
 }
 
 extension CatsListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(viewModel.amountOfCells, "VC")
         return viewModel.amountOfCells
     }
 
@@ -81,5 +96,26 @@ extension CatsListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("selected cell at \(indexPath)")
         print(viewModel.catsListDisplay[indexPath.row])
+    }
+}
+
+extension CatsListViewController: UIScrollViewDelegate {
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let seventyPercenteOfContentHeight = contentHeight * 0.7
+
+        if offsetY > seventyPercenteOfContentHeight {
+            if !isFetchingData {
+                beginBatchFetch()
+            }
+        }
+    }
+
+    func beginBatchFetch() {
+        currentPage += 1
+        isFetchingData = true
+        viewModel.fetchList(page: currentPage)
     }
 }
