@@ -9,7 +9,6 @@ import Foundation
 
 protocol CatsListViewModelOutput {
     var catsListDisplay: [CatsListDisplay] { get }
-    var amountOfCells: Int { get }
     var delegate: CatsListDelegate? { get set }
     func fetchList(page: Int)
 }
@@ -22,7 +21,6 @@ protocol CatsListDelegate: AnyObject {
 
 final class CatsListViewModel: CatsListViewModelOutput {
     var catsListDisplay: [CatsListDisplay] = []
-    var amountOfCells: Int = 0
     weak var delegate: CatsListDelegate?
     private let service: CatsImagesNetworking
     
@@ -34,12 +32,7 @@ final class CatsListViewModel: CatsListViewModelOutput {
         DispatchQueue.global(qos: .background).async {
             self.fetchCatsImages(page: page) { [weak self] catsResult in
                 guard let catsResult = catsResult else { return }
-
-                catsResult.data.forEach { cat in
-                    let catsListDisplay = CatsListDisplay(cats: cat)
-                    self?.catsListDisplay.append(catsListDisplay)
-                    self?.amountOfCells += catsListDisplay.imagesUrl.count
-                }
+                self?.populateCatsListDisplay(with: catsResult)
                 self?.delegate?.displayCatsList()
             }
         }
@@ -58,9 +51,23 @@ final class CatsListViewModel: CatsListViewModelOutput {
             self?.delegate?.showSpinner(false)
         }
     }
+
+    private func populateCatsListDisplay(with cats: Cats?) {
+        var catObjects: [CatObject] = []
+        cats?.data.forEach { cat in
+            let catObject = CatObject(cats: cat)
+            catObjects.append(catObject)
+        }
+
+        catObjects.forEach { cat in
+            cat.imagesUrl.forEach { image in
+                catsListDisplay.append(CatsListDisplay(image: image, name: cat.name))
+            }
+        }
+    }
 }
 
-struct CatsListDisplay {
+struct CatObject {
     let cats: CatImages
     
     var imagesUrl: [URL] {
@@ -78,4 +85,9 @@ struct CatsListDisplay {
     var name: String {
         return cats.tags.first?.displayName ?? ""
     }
+}
+
+struct CatsListDisplay {
+    let image: URL
+    let name: String
 }

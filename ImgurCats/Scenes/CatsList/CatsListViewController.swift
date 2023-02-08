@@ -79,14 +79,14 @@ extension CatsListViewController: CatsListDelegate {
 
 extension CatsListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.amountOfCells
+        return viewModel.catsListDisplay.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CatsCollectionCell.cellIdentifier, for: indexPath) as? CatsCollectionCell else { return UICollectionViewCell() }
 
-        let imagesUrl = viewModel.catsListDisplay.flatMap { $0.imagesUrl }
-        cell.configure(with: imagesUrl[indexPath.row])
+        let catObject = viewModel.catsListDisplay[indexPath.row]
+        cell.configure(with: catObject)
 
         return cell
     }
@@ -94,8 +94,7 @@ extension CatsListViewController: UICollectionViewDataSource {
 
 extension CatsListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("selected cell at \(indexPath)")
-        print(viewModel.catsListDisplay[indexPath.row])
+        print(viewModel.catsListDisplay[indexPath.item])
     }
 }
 

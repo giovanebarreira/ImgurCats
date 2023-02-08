@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A4719878-DF1E-41F5-A552-D1DBBE78D036"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ImgurCats/Scenes/CatsList/CatsListViewController.swift"
@@ -16,6 +16,86 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
             endingLineNumber = "56"
+            landmarkName = "displayCatsList()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A4719878-DF1E-41F5-A552-D1DBBE78D036 - c3172b7d675d07a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ImgurCats.CatsListViewController.displayCatsList() -&gt; ()"
+                  moduleName = "ImgurCats"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/giovanebarreira/Desktop/ImgurCats/ImgurCats/Scenes/CatsList/CatsListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "307">
+               </Location>
+               <Location
+                  uuid = "A4719878-DF1E-41F5-A552-D1DBBE78D036 - f36e260740e03a4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in ImgurCats.CatsListViewController.displayCatsList() -&gt; ()"
+                  moduleName = "ImgurCats"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/giovanebarreira/Desktop/ImgurCats/ImgurCats/Scenes/CatsList/CatsListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "35973CA6-E492-41D2-B30E-A4E39B62EE37"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImgurCats/Scenes/CatsList/CatsListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "771441FA-73C9-4C0E-A69B-010879395596"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImgurCats/Scenes/CatsList/Cell/CatsCollectionCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "configure(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08AE348D-4F36-4F4F-8959-46C10415DF93"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImgurCats/Scenes/CatsList/CatsListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "displayCatsList()"
             landmarkType = "7">
          </BreakpointContent>

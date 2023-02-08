@@ -45,10 +45,8 @@ final class CatsCollectionCell: UICollectionViewCell {
         thumbnail.image = nil
     }
 
-    func configure(with image: URL) {
-       // images.forEach { self.downloadImage($0) }
-        self.downloadImage(image)
-
+    func configure(with cat: CatsListDisplay) {
+        self.downloadImage(cat.image)
     }
 
     private func downloadImage(_ imageURL: URL) {
