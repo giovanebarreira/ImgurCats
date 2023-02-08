@@ -7,11 +7,20 @@
 
 import Foundation
 
-struct Cats: Codable {
+struct Cats: Codable, Equatable {
+    static func == (lhs: Cats, rhs: Cats) -> Bool {
+        lhs.data == rhs.data
+    }
+
     let data: [CatImages]
 }
 
-struct CatImages: Codable {
+struct CatImages: Codable, Equatable {
+    static func == (lhs: CatImages, rhs: CatImages) -> Bool {
+        lhs.images == rhs.images ||
+        lhs.tags == rhs.tags
+    }
+
     let images: [Image]?
     let tags: [Tag]
 
@@ -20,7 +29,7 @@ struct CatImages: Codable {
     }
 }
 
-struct Image: Codable {
+struct Image: Codable, Equatable {
     let link: String
 
     enum CodingKeys: String, CodingKey {
@@ -28,7 +37,7 @@ struct Image: Codable {
     }
 }
 
-struct Tag: Codable {
+struct Tag: Codable, Equatable {
     let displayName: String
 
     enum CodingKeys: String, CodingKey {

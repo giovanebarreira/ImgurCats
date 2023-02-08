@@ -10,7 +10,7 @@ import UIKit
 
 enum SelectedCatDummy {
     static let cat = CatsListDisplay(
-        image: URL(string: "https://imgur.com/a/59uAEIA")!,
-        name: "Fluffy"
+        image: URL(string: "https://i.imgur.com/ZKdnVo0.jpg")!,
+        name: "catsofimgur"
     )
 }
