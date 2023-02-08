@@ -18,10 +18,23 @@ final class AppCoordinator: Coordinator {
         navigationController = UINavigationController()
         self.window.rootViewController = rootViewController
         self.window.makeKeyAndVisible()
+        setupNavigationLayout()
     }
 
     func start() {
         let catsListCoordinator = CatsListCoordinator(navigationController: navigationController)
         catsListCoordinator.start()
+    }
+
+    private func setupNavigationLayout() {
+        navigationController.navigationBar.prefersLargeTitles = true
+
+        let appearance = UINavigationBarAppearance()
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+
+        navigationController.navigationBar.tintColor = .white
+        navigationController.navigationBar.standardAppearance = appearance
+        navigationController.navigationBar.scrollEdgeAppearance = appearance
     }
 }

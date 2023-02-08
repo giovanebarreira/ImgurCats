@@ -83,7 +83,7 @@ struct CatObject {
     }
     
     var name: String {
-        return cats.tags.first?.displayName ?? ""
+        return cats.tags.first?.displayName ?? "name unavailable"
     }
 }
 

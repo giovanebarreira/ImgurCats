@@ -9,7 +9,6 @@ import Foundation
 
 struct Endpoint {
     private let baseUrl = "https://api.imgur.com/3/"
-  //  private let baseImageUrl = "https://i.imgur.com/"
     private let gallerySearch = "gallery/search/"
     private let query = "?q=cats"
 

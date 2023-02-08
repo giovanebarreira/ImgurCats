@@ -61,7 +61,7 @@ final class CatsCollectionCell: UICollectionViewCell {
         // Corners
         contentView.layer.cornerRadius = cornerRadius
         contentView.layer.masksToBounds = true
-        layer.cornerRadius = 10
+        layer.cornerRadius = cornerRadius
         layer.masksToBounds = false
 
         // Shadow

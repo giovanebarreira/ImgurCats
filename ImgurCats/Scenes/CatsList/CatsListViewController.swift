@@ -8,7 +8,7 @@
 import UIKit
 
 final class CatsListViewController: UIViewController {
-
+    var coordinatorDelegate: CatsListCoordinated?
     private var viewModel: CatsListViewModelOutput
     private var collectionView: UICollectionView?
     private var isFetchingData: Bool = false
@@ -22,6 +22,10 @@ final class CatsListViewController: UIViewController {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     override func viewDidLoad() {
@@ -94,7 +98,8 @@ extension CatsListViewController: UICollectionViewDataSource {
 
 extension CatsListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(viewModel.catsListDisplay[indexPath.item])
+        let selectedCat = viewModel.catsListDisplay[indexPath.row]
+        coordinatorDelegate?.goToCatDetails(selectedCat: selectedCat)
     }
 }
 
